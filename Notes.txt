@@ -1,0 +1,55 @@
+
+
+
+Java based framework(s) for microservices
+-----------------------------------------
+
+
+
+    1. traditional java apps ( e.g springboot)
+    ------------------------------------------
+
+    - startup-time   : 2.5s
+    - memory         : 500mb
+
+    traditional java applications,
+
+    -> startup high, becoz
+
+        => load & parse all configuration files
+        => classpath &  classpath-scanning for anotation(s)
+        => using reflection , constructing meta-objects
+        => dynamic proxies, etc.....
+
+    -> memory high, becoz
+
+        => more classes ( JDK,bootstrap classes ) are loaded 
+
+
+    2. quarkus
+    ----------------------
+
+    1. JVM - application
+
+    - startup-time   : 0.9s
+    - memory         : 500mb
+
+    2. Native - application
+
+    - startup-time : 0.017s
+    - memory       : 8mb
+
+
+
+
+
+
+     
+
+
+
+
+  
+
+
+
