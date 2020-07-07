@@ -42,6 +42,26 @@ public class HeroResourceTest {
 
     private static final int NB_HEROES = 951;
     private static String heroId;
+    
+    
+    @Test
+    public void shouldPingOpenApi() {
+		given()
+			.header(ACCEPT, APPLICATION_JSON)
+			.when().get("/openapi")
+			.then()
+			.statusCode(OK.getStatusCode());
+	}
+    
+    
+    @Test
+    public void shouldPingSwaggerUI() {
+		given()
+			.header(ACCEPT, APPLICATION_JSON)
+			.when().get("/swagger-ui")
+			.then()
+			.statusCode(OK.getStatusCode());
+	}
 
     
     @Test

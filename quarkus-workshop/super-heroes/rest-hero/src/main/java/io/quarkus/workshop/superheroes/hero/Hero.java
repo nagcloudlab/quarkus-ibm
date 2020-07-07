@@ -1,4 +1,3 @@
-// tag::adocEntity[]
 package io.quarkus.workshop.superheroes.hero;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
@@ -10,12 +9,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import java.util.Random;
-// end::adocEntity[]
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 
 @Schema(description = "The hero fighting against the villain")
-// tag::adocEntity[]
 @Entity
 public class Hero extends PanacheEntity {
 
@@ -31,14 +28,12 @@ public class Hero extends PanacheEntity {
     @Column(columnDefinition = "TEXT")
     public String powers;
 
-    // tag::adocFindRandom[]
     public static Hero findRandom() {
         long countHeroes = Hero.count();
         Random random = new Random();
         int randomHero = random.nextInt((int) countHeroes);
         return Hero.findAll().page(randomHero, 1).firstResult();
     }
-    // end::adocFindRandom[]
 
     @Override
     public String toString() {
@@ -52,4 +47,3 @@ public class Hero extends PanacheEntity {
             '}';
     }
 }
-// end::adocEntity[]

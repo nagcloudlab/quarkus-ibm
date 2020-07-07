@@ -32,7 +32,7 @@ Java based framework(s) for microservices
     1. JVM - application
 
     - startup-time   : 0.9s
-    - memory         : 500mb
+    - memory         : 247mb
 
     2. Native - application
 
