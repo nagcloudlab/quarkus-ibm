@@ -1,5 +1,5 @@
+// tag::adocRestClient[]
 package io.quarkus.workshop.superheroes.fight.client;
-
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
@@ -17,3 +17,4 @@ public interface VillainService {
     @Path("/random")
     Villain findRandomVillain();
 }
+// end::adocRestClient[]
